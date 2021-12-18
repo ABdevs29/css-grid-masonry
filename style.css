@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: #1D1F30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 800px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+} 
+.initial {
+    grid-template-areas: "a a b c" "a a b c" "a a e f" "d d e f";
+}
+.item {
+    background-color: #2C2B44;
+    color: whitesmoke;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 1rem;
+    color: #8e97e6;
+}
+img {
+    height: 60px;
+    width: 60px;
+}
+p {
+    font-size: 1.2rem;
+}
+p::first-letter {
+    color: rgb(252, 229, 229);
+    font-size: x-large;
+  }
+.item:hover {
+    background-color: #e403be;
+    color: rgb(252, 229, 229);
+}
+.a {
+    grid-area: a;
+}
+.b {
+    grid-area: b;
+}
+.c {
+    grid-area: c;
+}
+.d {
+    grid-area: d;
+}
+.e {
+    grid-area: e;
+}
+.f {
+    grid-area: f;
+}
+.expand-a {
+    grid-template-areas: "a a b c" "a a b c" "a a e f" "d d e f";
+}
+.expand-b {
+    grid-template-areas: "a b b c" "a b b c" "d b b f" "d e e f";
+}
+.expand-c {
+    grid-template-areas: "a b c c" "a b c c" "d e c c" "d e f f";  
+}
+.expand-d {
+    grid-template-areas: "a a b c" "d d b c" "d d e f" "d d e f";
+}
+.expand-e {
+    grid-template-areas: "a b b c" "a e e c" "d e e f" "d e e f";
+}
+.expand-f {
+    grid-template-areas: "a b c c" "a b f f" "d e f f" "d e f f";
+}
